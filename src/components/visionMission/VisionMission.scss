@@ -1,0 +1,78 @@
+.missionVisionContainer{
+    position: relative;
+    width: 100%;
+    background: url("https://res.cloudinary.com/hayteetech/image/upload/v1755147225/pedarEnergy/slide2_hw4gy8.jpg")no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 60px 0px;
+    margin-bottom: 90px;
+    min-height: 500px;
+    .container{
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        .missionVision{
+            background: var(--primaryColor);
+            width: 60%;
+            position: absolute;
+            bottom: -60px!important;
+            float: right;
+            padding: 62px 70px 68px;
+            z-index: 1;
+            h4{
+                font-family: var(--headingFamily);
+                color: #222222;
+                font-weight: 600;
+            }
+            .content{
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                gap: 20px;
+                margin-top: 30px;
+                .iconDiv{
+                    // margin-bottom: 10px;
+                    .icon{
+                        color:#222222;
+                        font-size: xx-large;
+                    }
+                }
+                p{
+                    font-family: var(--textFamily);
+                    color: #222;
+                }
+            }
+        }
+        @media screen and (max-width: 960px){
+            .missionVision{
+                width: 80%;
+            }
+
+        }
+         @media screen and (max-width: 700px){
+            .missionVision{
+                width: 97%;
+            }
+
+        }
+        @media screen and (max-width: 600px){
+            .missionVision{
+                padding: 20px 10px 20px;
+                .content{
+                    flex-direction: column;
+                    gap: 10px;
+                    
+                }
+                h4{
+                        font-size: 20px;
+                    }
+            }
+
+        }
+    }
+}
+@media screen and (max-width: 600px){
+    .missionVisionContainer{
+        min-height: 600px;
+    }
+}

@@ -1,0 +1,329 @@
+.aboutContainer{
+    position: relative;
+    width: 100%;
+    padding: 80px 0px 50px;
+    .aboutContainerSession1{
+        position: relative;
+        padding-bottom: 30px;
+        border-bottom: 1px solid var(--primaryColor);
+        .imageContainer{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    }
+    .content{
+        position: relative;
+        .text{
+            font-family: var(--textFamily);
+            color: #222222;
+            font-size: 16px;
+            padding-bottom: 20px;
+        }
+        .aboutButton{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding: 10px 0px;
+        }
+        @media screen and (max-width: 500px){
+            .aboutButton{
+                flex-direction:column;
+                align-items: flex-start
+            }
+        }
+        .call{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            padding: 10px 0px;
+            .icon{
+                font-size:25px;
+                color: var(--secondaryColor);
+                font-family: var(--headingFamily);
+                font-weight: 600;
+            }
+            a{
+                color: #222222;
+                font-family: var(--headingFamily);
+                font-weight: 600;
+                font-size: 18px;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.howWeworkContainer{
+    position: relative;
+    .howweWorkTop{
+        position: relative;
+        text-align: center;
+        width: 70%;
+        margin: 60px auto 20px;
+        .subtitle{
+            justify-content: center;
+        }
+        .titleStroke{
+            width: 100%;
+            top: -40px
+        }
+    }
+    @media screen and (max-width: 800px){
+        .howweWorkTop{
+            width: 90%;
+        }
+    }
+     @media screen and (max-width: 500px){
+        .howweWorkTop{
+            width: 100%;
+        }
+    }
+
+    .howWeWorkCard{
+        position: relative;
+        padding-top: 20px;
+        .aboutCard{
+            position: relative;
+            box-shadow: 9px 12px 38px 0px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s;
+            background: #ffffff;
+            // padding: 28px 40px 40px 40px;
+            .cardContent{
+                position: relative;
+                padding: 30px;
+                min-height: 320px;
+                .cardTop{
+                    padding-top: 30px;
+                    position: relative;
+                }
+                .titleStroke{
+                    font-size: 70px;
+                    top: -50px;
+                }
+                .cardSubtitle{
+                    font-family: var(--headingFamily);
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    color: var(--primaryColor);
+                }
+                .cardWrapper{
+                    .cardTitle{
+                        font-family: var(--headingFamily);
+                        font-size: 20px;
+                        text-transform: capitalize;
+                        font-weight: 600;
+                        color: #222222;
+                        text-align: center;
+                        padding: 20px 0px 5px;
+                    }
+                    .cardText{
+                        font-family: var(--textFamily);
+                        font-size: 15px;
+                        color: #222222;
+                        line-height: 30px;
+                    }
+                }
+            }
+            .cardMedia{
+                position: absolute;
+                background-color: #FFFFFF;
+                background-image: url('../../Images/aboutcard3.jpg');
+                background-size: cover;
+                opacity: 0;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                transform: scale(0); /* Start completely shrunken */
+                transform-origin: center center; 
+                transition: transform 0.5s ease, opacity 0.5s ease;
+            }
+            .cardMedia2{
+                background-image: url('../../Images/aboutcard2.jpg');
+            }
+            .cardMedia3{
+                background-image: url('../../Images/aboutcard1.jpg');
+            }
+            .cardIcon{
+                position: absolute;
+                bottom: -30px;
+                width: 100%;
+                .iconImage{
+                    width: 60px;
+                    height: 60px;
+                    background: var(--primaryColor);
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .icon{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .aboutCard:hover .cardMedia{
+            opacity: 1;
+            transform: scale(1);
+        }
+        .aboutCard:hover .cardTitle,
+        .aboutCard:hover .cardText{
+            color: #fff!important;
+        }
+    }
+}
+
+// another section here
+.aboutQuestionContainer{
+    position: relative;
+    width: 100%;
+    background: var(--primaryColor);
+    padding: 60px 0px;
+    margin-top: 90px;
+    .contentWrapper{
+        position: relative;
+        display: flex;
+        align-items: center;
+        .left{
+            width: 70%;
+            .text{
+                font-size: 17px;
+                font-family: var(--textFamily);
+                padding-top: 20px;
+                color: #222;
+            }
+        }
+        .right{
+            position: relative;
+            width: 30%;
+            .titleStroke{
+                 -webkit-text-stroke-color: rgba(243, 243, 243, 0.94);
+                 top: -60px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px){
+        .contentWrapper{
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
+            padding-bottom: 30px;
+            .left{
+                width: 100%;
+            }
+            .right{
+                width: 100%;
+            }
+            .titleStroke{
+                font-size: 100px;
+                 top: -50px;
+            }
+        }
+    }
+}
+
+// another session here
+.coreValueContainer{
+    width: 100%;
+    position: relative;
+    .topContainer{
+        position: relative;
+        text-align: center;
+        width: 70%;
+        margin: 60px auto 20px;
+        .subtitle{
+            justify-content: center;
+        }
+        .titleStroke{
+            width: 100%;
+            top: -40px
+        }
+       
+    }
+   
+    @media screen and (max-width: 900px){
+        .topContainer{
+            width: 90%;
+        }
+    }
+    @media screen and (max-width: 768px){
+        .topContainer{
+            width: 100%;
+        }
+    }
+    .valueContainerCard{
+        position: relative;
+        box-shadow: 9px 12px 38px 0px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s;
+        background: #ffffff;
+        padding: 30px ;
+        height: 200px;
+        z-index:0;
+        .iconCard{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primaryColor);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .icon{
+                font-family: var(--headingFamily);
+                font-size: 20px;
+                font-weight: 600
+            }
+        }
+        .cardTitle{
+            font-family: var(--headingFamily);
+            font-weight: 600;
+            font-weight: 18px;
+            padding: 10px 0px;
+            color: #222222;
+        }
+        .text{
+            font-family: var(--textFamily);
+            font-weight: 16px;
+            padding: 5px 0px;
+            color: #222222;
+        }
+    }
+    .valueContainerCard:before{
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        background: url('../../Images/cardBg.jpg');
+        background-repeat: no-repeat;
+        opacity: 0;
+        content: "";
+        transform:  perspective(400px) scaleX(0);
+        transition: all 0.4s linear;
+        z-index: 0; 
+        border-bottom: 2px solid var(--primaryColor);
+    }
+    .valueContainerCard:hover:before{
+        opacity: 1;
+        transform: perspective(400px) scale(1.0);
+    }
+    .valueContainerCard .content{
+        position: relative;
+        z-index: 1; 
+    }
+    .valueContainerCard:hover .cardTitle,
+    .valueContainerCard:hover .text{
+         color: #fff!important;
+    }
+
+    @media screen and (min-width: 767px) and (max-width: 992px){
+        .valueContainerCard{
+            height: 250px;
+        }
+    }
+}

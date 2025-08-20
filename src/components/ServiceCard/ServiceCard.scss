@@ -1,0 +1,90 @@
+.ServiceCardContainer{
+    position: relative;
+    width: 100%;
+    padding: 30px 0px;
+
+    .servicesCard{
+        position: relative;
+        box-shadow: 9px 12px 38px 0px rgba(0, 0, 0, 0.103);
+        transition: all 0.5s;
+        background: #fff;
+        padding: 30px;
+        // height: 200px;
+        z-index: 0;
+
+        &:before{
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: url('../../Images/cardBg.jpg');
+            background-repeat: no-repeat;
+            opacity: 0;
+            content: "";
+            transform: perspective(400px) scaleX(0);
+            transition: all 0.4s linear;
+            z-index: 0; 
+            border-bottom: 2px solid var(--primaryColor);
+        }
+
+        &:hover:before{
+            opacity: 1;
+            transform: perspective(400px) scale(1.0);
+        }
+
+        .content{
+            position: relative;
+            z-index: 1; 
+        }
+    }
+    .servicesCard2{
+        background: var(--secondaryColor);
+    }
+    .servicesCard {
+        .cardIcon{
+            position: relative;
+            padding-bottom: 20px;
+            .icon{
+                font-size: 40px;
+                color: var(--primaryColor);
+            }
+        }
+        .cardTitle{
+            font-family: var(--headingFamily);
+            font-weight: 600;
+            color: #222;
+            height: 80px;
+            font-size: 17px;
+        }
+        .cardDescription{
+            font-family: var(--textFamily);
+            font-size: 15px;
+            color: #222;
+             display: -webkit-box;
+            -webkit-line-clamp: 2; /* Show only 3 lines */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .LearnMore{
+            padding-top: 20px;
+            a{
+                color: var(--primaryColor);
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 16px;
+                transition: 0.4s all ease-in-out;
+                &:hover{
+                    color: #fff;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    .servicesCard:hover .cardTitle,
+    .servicesCard:hover .cardDescription{
+        color: #fff;
+    }
+    .servicesCard2 .cardDescription,
+    .servicesCard2 .cardTitle{
+        color: #fff;
+    }
+}

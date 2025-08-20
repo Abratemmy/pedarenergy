@@ -1,0 +1,86 @@
+.faqContainer{
+    position: relative;
+    .titleContainer{
+        padding: 5px 0px;
+    }
+    .pageTitle{
+        color: #222222;
+        font-family: var(--headingFamily);
+        font-weight: 600;
+        padding: 20px 0px;
+        font-size: x-large;
+    }
+    .wrapper{
+        background: #faf7f0;
+        padding-left: 35px;
+        padding-right: 30px;
+        padding-top: 18px;
+        padding-bottom: 19px;
+        z-index: 1;
+        position: relative;
+        display: block;
+        cursor: pointer;
+        transition: all 500ms ease;
+        margin-bottom: 8px;
+        border: 0px solid red;
+    }
+    .wrapper:before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: "";
+        border: 1px solid var(--primaryColor);
+        -webkit-transition: all 0.4s linear;
+        -o-transition: all 0.4s linear;
+        transition: all 0.4s linear;
+        transform: scaleY(0);
+        // transform-origin: top;       /* animate from top down */
+        pointer-events: none;  
+    }
+
+    .wrapper.active:before {
+        transform: scaleY(1);
+    }
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        font-family: var(--headingFamily);
+        color: #222222;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 600;
+        transition: all 500ms ease;
+    }
+    .titleColor{
+        color: var(--primaryColor);
+        font-weight: normal!important;
+    }
+    .icon{
+        font-weight: normal!important;
+        font-size:20px;
+    }
+    .answer{
+        font-family: var(--textFamily);
+        color: var(--textColor);
+        font-size: 16px;
+        line-height: 27px;
+        animation-name: slideIn;
+        animation-duration: 500ms;
+        animation-timing-function: ease-in;
+    }
+    @keyframes slideIn {
+        0% {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0%);
+          opacity: 1;
+        
+        }
+      }
+}

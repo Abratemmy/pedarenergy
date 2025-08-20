@@ -1,0 +1,95 @@
+.blogCardComponent{
+    width: 100%;
+    position: relative;
+    .blogCardWrapper{
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on large screens */
+        gap: 30px;
+        margin: 50px 0px;
+    }
+
+    @media (max-width: 992px) {
+        .blogCardWrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+    .blogCard{
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .img-holder{
+            position: relative;
+            flex: 1;
+            .immer{
+                position: relative;
+                display: block;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 250px;
+                    transition: all 200ms linear;
+                    transition-delay: 0.1s;
+                }
+            }
+            .immer:before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: #000000;
+                text-align: center;
+                z-index: 1;
+                opacity: 0.6;
+                transform: translateY(100%); /* Start fully below image */
+                transition: transform 0.5s ease-in-out;
+            }
+        }
+        .text-holder{
+            flex:1;
+            padding-right: 10px;
+            h6{
+                color: #222;
+                font-family: var(--headingFamily);
+                font-weight: 700;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+            p{
+                display: -webkit-box;
+                -webkit-line-clamp: 2; /* Show only 3 lines */
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-family: var(--textFamily);
+            }
+            .button{
+                margin: 20px 0 ;
+            }
+        }
+    }
+    .blogCard:hover .immer:before {
+        transform: translateY(0); /* Slide into view */
+    }
+    .blogCard:hover .img-holder .immer img{
+        transform: scale(1.2);
+        transition: all 0.5s cubic-bezier(0.62, 0.21, 0.45, 1.52);
+    }
+    @media screen and (max-width: 600px) {
+        .blogCard {
+            flex-direction: column; /* Stack image and text vertically */
+        }
+        .img-holder, .text-holder {
+            width: 100%; 
+            height: auto;
+        }
+        
+    }
+}

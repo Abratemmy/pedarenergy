@@ -1,0 +1,79 @@
+.testimonialComponentWrapper{
+    position: relative;
+    width: 100%;
+    background: linear-gradient(90deg,rgba(15, 15, 15, 0.644) 0%, rgba(20, 20, 20, 0.452) 50%, rgba(20, 20, 20, 0.267) 100%),url('https://res.cloudinary.com/hayteetech/image/upload/v1755647977/pedarEnergy/background_vgpbsy.jpg') no-repeat center center/cover;
+    min-height: 400px;
+    padding: 60px 0px;
+    .subtitle{
+        color: #fff;
+    }
+    .pageTitle{
+        color: #fff;
+    }
+}
+.testimonialComponent{
+    position: relative;
+    .slick-slide {
+        padding: 0 10px; /* 10px space on left & right of each card */
+    }
+    .slick-list {
+        margin: 0 -10px; /* Prevent extra space at the edges */
+        overflow: visible!important
+    }
+    .testimonialSlider{
+        position: relative;
+        width: 100%;
+        top: -80px
+    }
+    .content{
+        background: var(--secondaryColor);
+        box-shadow: 0px 0px 13.5px 1.5px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        padding: 60px 30px 30px;
+        position: relative;
+        text-align: center;
+        min-height: 220px;
+         overflow: visible;
+        .testimonyIcon{
+            position: absolute;
+            top: -40px;
+            left: 40%;
+            color: var(--primaryColor);
+            .icon{
+                font-size: 70px;
+            }
+        }
+        .testimonyText{
+            font-family: var(--textFamily);
+            font-size: 16px;
+            color: #fff;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            height: 80px;
+        }
+        .name{
+            font-family: var(--headingFamily);
+            font-weight: 600;
+            color: var(--primaryColor);
+            margin-bottom: 5px;
+        }
+    }
+    .content:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000000;
+        text-align: center;
+        z-index: 0;
+        opacity: 0;
+        transform: translateY(1%); /* Start fully below image */
+        transition: transform 0.5s ease-in-out;
+    }
+    .content:hover:before{
+        opacity: 0.4;
+        transform: translateY(0%); /* Move to cover the content */
+    }
+}
