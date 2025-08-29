@@ -14,7 +14,11 @@ function ServiceCard({ inHomePage = false }) {
                 <div className="contactContentTop">
                     <div className="titleStroke">Services</div>
                     <div className="subtitle"><span className="border-box"></span>OUR SERVICES</div>
-                    <h2 className="pageTitle">We provide best Services</h2>
+                    <h2 className="pageTitle">{inHomePage ? <div>Tailored Energy <span>Solutions</span></div>
+                        :
+                        <div>Innovative Solutions, <span>Smarter Operations</span></div>
+                    }
+                    </h2>
                     <p>Comprehensive solutions for energy, industrial, and governance challenges.</p>
                 </div>
                 <div className='row g-4' style={{ margin: '50px 0px 20px' }}>

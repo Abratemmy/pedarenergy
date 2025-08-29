@@ -1,89 +1,53 @@
 import React from 'react';
 import './ProjectCard.scss';
-import Slider from "react-slick";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay, A11y } from "swiper/modules";
+
+// Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
 
-const SampleNextArrow = (props) => {
-    const { onClick } = props;
-    return (
-        <div
-            className="custom-arrow next-arrow"
-            onClick={onClick}
-        >
-            <div className="arrowDiv"><IoIosArrowForward className="icon" /></div>
-        </div>
-    );
-};
-
-const SamplePrevArrow = (props) => {
-    const { onClick } = props;
-    return (
-        <div
-            className="custom-arrow prev-arrow"
-            onClick={onClick}
-        >
-            <div className="arrowDiv"><IoIosArrowBack className="icon" /></div>
-        </div>
-    );
-};
 
 function ProjectCard() {
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        initialSlide: 0,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 800,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
     return (
         <div className='projectCardContainer'>
             <div className='container'>
                 <div className="contactContentTop">
                     <div className="titleStroke">Projects</div>
                     <div className="subtitle"><span className="border-box"></span>OUR PROJECTS</div>
-                    <h2 className="pageTitle">Some of our recent projects</h2>
+                    <h2 className="pageTitle">Some of our recent <span>projects</span></h2>
                 </div>
 
-                <div className='projectCardSlider'>
-                    <Slider {...settings}>
-                        <div>
-                            <div class="single-service-style">
-                                <div class="img-holder">
-                                    <div class="inner">
-                                        <img loading="lazy" decoding="async" width="300" height="300"
+                <div className='slider-container projectCardSlider'>
+                    <Swiper
+                        modules={[Pagination, Autoplay, A11y]}
+                        slidesPerView={3}
+                        spaceBetween={20}
+                        loop={true}
+                        autoplay={{ delay: 5000, disableOnInteraction: false }}
+                        pagination={{ clickable: true }}
+                        breakpoints={{
+                            0: { slidesPerView: 1 },      // phones
+                            750: { slidesPerView: 2 },    // tablets
+                            1200: { slidesPerView: 3 },   // desktops
+                        }}
+                        className="projectCard-swiper"
+                    >
+                        <SwiperSlide>
+                            <div className="single-service-style">
+                                <div className="img-holder">
+                                    <div className="inner">
+                                        <img loading="lazy" decoding="async" width="300" height="350"
                                             src='https://res.cloudinary.com/hayteetech/image/upload/v1755644378/pedarEnergy/project3_zivgpg.jpg'
-                                            class="attachment-erdunt_360x400 size-erdunt_360x400 wp-post-image" alt=""
+                                            className="attachment-erdunt_360x400 size-erdunt_360x400 wp-post-image" alt=""
                                             sizes="auto, (max-width: 360px) 100vw, 360px"
                                         />
                                     </div>
                                 </div>
-                                <div class="text-holder text-center">
+                                <div className="text-holder text-center">
                                     <h5>Solar Hybrid Microgrid </h5>
                                     <div className="location">
                                         <span className="icon"><FaLocationDot /></span>
@@ -93,19 +57,20 @@ function ProjectCard() {
 
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="single-service-style">
-                                <div class="img-holder">
-                                    <div class="inner">
-                                        <img loading="lazy" decoding="async" width="300" height="300"
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="single-service-style">
+                                <div className="img-holder">
+                                    <div className="inner">
+                                        <img loading="lazy" decoding="async" width="300" height="350"
                                             src='https://res.cloudinary.com/hayteetech/image/upload/v1755147223/pedarEnergy/service5_ddowpd.jpg'
-                                            class="attachment-erdunt_360x400 size-erdunt_360x400 wp-post-image" alt=""
+                                            className="attachment-erdunt_360x400 size-erdunt_360x400 wp-post-image" alt=""
                                             sizes="auto, (max-width: 360px) 100vw, 360px"
                                         />
                                     </div>
                                 </div>
-                                <div class="text-holder text-center">
+                                <div className="text-holder text-center">
                                     <h5>LNG Supply Chain </h5>
                                     <div className="location">
                                         <span className="icon"><FaLocationDot /></span>
@@ -115,19 +80,20 @@ function ProjectCard() {
 
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="single-service-style">
-                                <div class="img-holder">
-                                    <div class="inner">
-                                        <img loading="lazy" decoding="async" width="300" height="300"
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="single-service-style">
+                                <div className="img-holder">
+                                    <div className="inner">
+                                        <img loading="lazy" decoding="async" width="300" height="350"
                                             src='https://res.cloudinary.com/hayteetech/image/upload/v1755644075/pedarEnergy/project2_mbwntf.jpg'
-                                            class="attachment-erdunt_360x400 size-erdunt_360x400 wp-post-image" alt=""
+                                            className="attachment-erdunt_360x400 size-erdunt_360x400 wp-post-image" alt=""
                                             sizes="auto, (max-width: 360px) 100vw, 360px"
                                         />
                                     </div>
                                 </div>
-                                <div class="text-holder text-center">
+                                <div className="text-holder text-center">
                                     <h5>Oilfield Camp Support </h5>
                                     <div className="location">
                                         <span className="icon"><FaLocationDot /></span>
@@ -137,9 +103,8 @@ function ProjectCard() {
 
                                 </div>
                             </div>
-                        </div>
-
-                    </Slider>
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
 
             </div>

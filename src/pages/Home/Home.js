@@ -16,6 +16,7 @@ import CounterComponent from '../../components/Counter/CounterComponent';
 import ProjectCard from '../../components/projectCard/ProjectCard';
 import TestimonialComponent from '../../components/TestimonialComponent/TestimonialComponent';
 import BlogCard from '../../components/Blog/BlogCard';
+import DownloadFile from '../../components/DownloadFile/DownloadFile';
 
 
 
@@ -34,7 +35,7 @@ function Home() {
                                         <h2>01</h2>
                                     </div>
                                     <div class="text">
-                                        <h3>20+ years combined industry expertise</h3>
+                                        <h3>Extensive Industry Expertise</h3>
                                     </div>
                                 </div>
                             </div>
@@ -114,7 +115,7 @@ function Home() {
                             <div className="home-about-style">
                                 <div className="titleStroke">About</div>
                                 <div className="subtitle"><span className="border-box"></span>WHO WE ARE</div>
-                                <h2>We are the best <span>Energy Company</span></h2>
+                                <h2>Your Partner get <span> Smarter, Safer Energy</span></h2>
                                 <div className="content">
                                     Pedar Energy is a Nigerian energy and industrial services company delivering safe, sustainable, and innovative solutions. Our expertise spans engineering, procurement, clean energy, workforce support, and compliance, empowering industries and communities alike.
                                 </div>
@@ -147,10 +148,10 @@ function Home() {
                 <div className="container">
                     <div className="elementorContent">
                         <div className="left">
-                            <div class="title-box">
-                                <div class="sec-title style2">
-                                    <div class="sub-title">
-                                        <span class="border-box"></span>
+                            <div className="title-box">
+                                <div className="sec-title style2">
+                                    <div className="sub-title">
+                                        <span className="border-box"></span>
                                         <h5>Workers Protected with PEGEAR®</h5>
                                     </div>
 
@@ -165,7 +166,7 @@ function Home() {
                             <Button
                                 text="Explore PEGEAR®"
                                 button2ndDesign
-                                buttonLink="/"
+                                buttonLink="/pegear"
                             />
                         </div>
                     </div>
@@ -173,9 +174,7 @@ function Home() {
             </div>
 
             {/* project section */}
-            <div className="homeProjectContainer">
-                <ProjectCard />
-            </div>
+            <ProjectCard />
 
             {/* Testimony section */}
             <div className='homeTestimonyContainer'>
@@ -183,34 +182,66 @@ function Home() {
             </div>
 
             {/* blog card here */}
-            <div>
-                <BlogCard />
-            </div>
+            <BlogCard />
 
             {/* why choose us container */}
             <div className="whyChooseUSContainerWrapper">
                 <div className="whyChooseUsContainer">
                     <div className="container">
 
-                        <div class="project-style4_top">
-                            <div class="sec-title style2 with_text">
-                                <div class="sub-title">
-                                    <span class="border-box"></span>
+                        <div className="project-style4_top">
+                            <div className="sec-title style2 with_text">
+                                <div className="sub-title">
+                                    <span className="border-box"></span>
                                     <h5>Governance & Compliance </h5>
                                 </div>
 
                                 <h2>Our Commitment to Ethical Governance</h2>
                             </div>
 
-                            <div class="text">
+                            <div className="text">
                                 <p>At Pedar Energy Limited, good governance is a core pillar of our business. We are committed to ethical practices, compliance with all applicable laws, and the promotion of human rights throughout our operations and supply chain.</p>
                                 <div className="download">
                                     Download here <span><FaHandPointDown className='icon' /></span>
                                 </div>
-                                <Button
+                                {/* <Button
                                     text="Download"
                                     buttonLink="/about_us"
-                                />
+                                /> */}
+                                <div className="downloadBookSession">
+                                    <div className="download">
+                                        <span>
+                                            <DownloadFile
+                                                filePath="/documents/Modern-Slavery-Policy.pdf"
+                                                fileName="Modern Slavery Policy.pdf"
+                                            >
+                                                Modern Slavery Policy.pdf 
+                                            </DownloadFile>
+                                        </span>
+                                    </div>
+                                    <div className="download">
+                                        <span>
+                                            <DownloadFile
+                                                filePath="/documents/Code-of-Conduct.pdf"
+                                                fileName="Code of Conduct.pdf"
+                                            >
+                                                Code of Conduct.pdf
+                                            </DownloadFile>
+                                        </span>
+                                    </div>
+                                    <div className="download">
+                                        <span>
+                                            <DownloadFile
+                                                filePath="/documents/Antibribery-policy.pdf"
+                                                fileName="Antibribery policy.pdf"
+                                            >
+                                               Antibribery policy.pdf
+                                            </DownloadFile>
+                                        </span>
+                                    </div>
+
+                                
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -320,10 +351,10 @@ function Home() {
             <div className="homeFaqSection">
                 <div className="container">
                     <div className="row gy-5">
-                        <div className="col-xl-7">
-                            <div class="sec-title style3 with_text">
-                                <div class="sub-title clr2">
-                                    <span class="border-box"></span>
+                        <div className="col-lg-7">
+                            <div className="sec-title style3 with_text">
+                                <div className="sub-title clr2">
+                                    <span className="border-box"></span>
                                     <h5>Pedar Energy Services</h5>
                                 </div>
                                 <h2>General Questions</h2>
@@ -333,8 +364,7 @@ function Home() {
 
                         </div>
 
-                        <div className="col-xl-5">
-
+                        <div className="col-lg-5">
                             <div className="faq-style2-image-box">
                                 <div className="inner">
                                     <img decoding="async"
@@ -351,7 +381,7 @@ function Home() {
                                         <div className="icon1">
                                             <MdPhoneCallback className="icon" />
                                         </div>
-                                        <div class="text">
+                                        <div className="text">
                                             <p>Call us for a Project Quote</p>
                                             <h3><a href="tel:(+234) 807 836 6949">(+234) 807 836 6949</a></h3>                                    </div>
                                     </div>

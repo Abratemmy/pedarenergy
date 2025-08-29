@@ -5,21 +5,16 @@
     .projectCardSlider{
         position: relative;
         width: 100%;
+        max-width: 1200px;   /* keep it neat on large desktops */
+        margin: 0 auto; 
         padding: 50px 60px;
-
-        //    giving padding to react-slick carousel
-        .slick-slide {
-            padding: 0 10px; /* 10px space on left & right of each card */
-        }
-        .slick-list {
-            margin: 0 -10px; /* Prevent extra space at the edges */
-        }
 
         .single-service-style{
             position: relative;
             display: block;
             background: #fff;
-            box-shadow: 0px 0px 13.5px 1.5px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             .img-holder{
                 position: relative;
                 display: block;
@@ -66,7 +61,7 @@
                     justify-content: center;
                 }
                 p{
-                    font-size: 16px;
+                    font-size: 18px;
                     font-family: var(--textFamily);
                     height: 80px;
                 }
@@ -82,70 +77,24 @@
             transition: all 0.5s cubic-bezier(0.62, 0.21, 0.45, 1.52);
         }
 
-        .slick-slider {
-            width: 100%;
-        }
-
-        .slick-slide img {
-            width: 100%;
-            height: auto;
-        }
-
-        .custom-arrow{
-            position: absolute;
-            top: 50%;
-            color:#fff;
-            font-size:30px;
-            z-index: 10;
-        }
-        .custom-arrow.prev-arrow{
-            left: -60px;
-        }
-        .custom-arrow.next-arrow{
-            right: -60px;
-        }
-    
-        .arrowDiv{
-            width: 50px;
-            height: 50px;
-            border: 1px solid #222222;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: 0.4s all ease;
-            background: var(--greenColor);
-            .icon{
-                font-size: 18px;
-            }
-        }
-        .arrowDiv:hover{
-            background: #222222;
-        }
-        .arrowDiv:hover .icon{
-            color: #ffffff;
-        }
-        @media screen and (max-width: 768px){
-            .homeSlider-container{
-                padding: 0 10px;
-            }
-            .custom-arrow.prev-arrow{
-                left: 0px;
-            }
-            .custom-arrow.next-arrow{
-                right: 0px;
-            }
-            .arrowDiv{
-                border: 1px solid var(--primaryColor);
-            }
+        .swiper-pagination {
+            position: relative !important; /* take it out of absolute */
         }
        
     }
+  
     @media screen and (max-width: 500px){
         .projectCardSlider{
             padding: 50px 5px;
         }
         
+    }
+
+    @media (max-width: 800px) {
+        .projectCardSlider{
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+  
     }
 }

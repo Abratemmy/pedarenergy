@@ -60,7 +60,7 @@ function Services() {
                                 </div>
                                 <div className='col-lg-6 col-md-12 col-sm-12'>
                                     <div className="imageSession">
-                                        <img src="https://res.cloudinary.com/hayteetech/image/upload/v1755490513/pedarEnergy/oil_yfzr5g.jpg" alt="Clean Energy Solutions" className='img-fluid' />
+                                        <img src="https://res.cloudinary.com/hayteetech/image/upload/v1755832333/pedarEnergy/service6_jld2vy.jpg" alt="Clean Energy Solutions" className='img-fluid' />
                                     </div>
                                 </div>
                             </div>
@@ -115,7 +115,7 @@ function Services() {
                                 </div>
                                 <div className='col-lg-6 col-md-12 col-sm-12'>
                                     <div className="imageSession">
-                                        <img src='https://res.cloudinary.com/hayteetech/image/upload/v1755490564/pedarEnergy/oil4_ui216g.jpg' alt="OEM Partnerships" className='img-fluid' />
+                                        <img src='https://res.cloudinary.com/hayteetech/image/upload/v1755832333/pedarEnergy/service7_pmgmwg.jpg' alt="OEM Partnerships" className='img-fluid' />
                                     </div>
                                 </div>
                             </div>
@@ -169,14 +169,13 @@ function Services() {
                                 </div>
                                 <div className='col-lg-6 col-md-12 col-sm-12 '>
                                     <div className="imageSession">
-                                        <img src="https://res.cloudinary.com/hayteetech/image/upload/v1755490128/pedarEnergy/OIL-AND-GAS-BUSINES4_cbco1p.jpg" alt="Procurement Excellence" className='img-fluid' />
+                                        <img src="https://res.cloudinary.com/hayteetech/image/upload/v1755832333/pedarEnergy/service8_h00fck.jpg" alt="Procurement Excellence" className='img-fluid' />
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div className='cleanEnergy' id='campSupport'>
-
                             <div className="row">
                                 <div className='col-lg-6 col-md-12 col-sm-12 order-lg-2'>
                                     <div className="descriptionSession">
@@ -225,6 +224,33 @@ function Services() {
                                 <div className='col-lg-6 col-md-12 col-sm-12'>
                                     <div className="imageSession">
                                         <img src="https://res.cloudinary.com/hayteetech/image/upload/v1755489925/pedarEnergy/IMG_9785_va0z4j.jpg" alt="Environmental Advisory" className='img-fluid' />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='cleanEnergy' id='independentPA'>
+                            <div className="row">
+                                <div className='col-lg-6 col-md-12 col-sm-12 order-lg-2'>
+                                    <div className="descriptionSession">
+                                        <div className="subtitle"><span className="border-box"></span>Our Services</div>
+                                        <h2 className="pageTitle">Independent Person <br />Assessment (IPA)</h2>
+                                        <p>
+                                            Pedar Energy provides independent third-party assurance for energy and infrastructure projects, ensuring compliance, transparency, and trust:
+                                        </p>
+                                        <ul>
+                                            <li><BsDot className='icon' /><span>Independent review of engineering designs & procurement</span></li>
+                                            <li><BsDot className='icon' /><span>Risk assessments, due diligence & quality audits</span></li>
+                                            <li><BsDot className='icon' /><span>Contract compliance verification (aligned with Nigerian regulations & international standards)</span></li>
+                                            <li><BsDot className='icon' /><span>Neutral evaluations to satisfy regulators, investors & stakeholders</span></li>
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <div className='col-lg-6 col-md-12 col-sm-12 order-lg-1'>
+                                    <div className="imageSession">
+                                        <img src="https://res.cloudinary.com/hayteetech/image/upload/v1755832534/pedarEnergy/service9_xuiyat.jpg" alt="Field Catering and Camp Support" className='img-fluid' />
                                     </div>
                                 </div>
                             </div>

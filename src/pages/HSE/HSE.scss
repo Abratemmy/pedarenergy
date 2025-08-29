@@ -11,7 +11,7 @@
         .title{
             font-family: var(--headingFamily);
             font-weight: 600;
-            font-size: x-large;
+            font-size: large;
             color: var(--primaryColor);
         }
         .text{
@@ -20,6 +20,19 @@
             color: #555;
             line-height: 1.6;
             padding: 10px 0px;
+            span{
+                font-weight: 600;
+            }
+        }
+        .subTitle{
+            font-family: var(--headingFamily);
+            font-weight: 600;
+            font-size: 17px;
+            color: #333333;
+            padding: 5px 0px;
+            span{
+                padding-right: 10px;
+            }
         }
         ul{
             list-style-type: none;
@@ -29,10 +42,14 @@
                 font-size: 15px;
                 color: #555;
                 margin-bottom: 10px;
+                font-weight: 600;
                 &:before{
                     content: "•";
                     color: var(--primaryColor);
                     margin-right: 10px;
+                }
+                span{
+                    font-weight: 500;
                 }
             }
         }
@@ -59,5 +76,137 @@
             width: 100%;
         }
         
+    }
+
+    // another section here
+    .hseCardContainer{
+        position: relative;
+        .policyCard{
+            position: relative;
+            box-shadow: 9px 12px 38px 0px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s;
+            background: #ffffff;
+            padding: 30px ;
+            // height: 200px;
+            z-index:0;
+            .policyIcon{
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background: var(--primaryColor);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .icon{
+                    font-family: var(--headingFamily);
+                    font-size: 40px;
+                    font-weight: 600;
+                    color: #fff;
+                }
+            }
+            .title{
+                font-family: var(--headingFamily);
+                font-weight: 600;
+                font-weight: 19px;
+                padding: 10px 0px;
+                color: #222222;
+            }
+            .text{
+                font-family: var(--textFamily);
+                font-weight: 16px;
+                padding: 5px 0px;
+                color: #222222;
+            }
+        }
+        .policyCardActive{
+            background: var(--secondaryColor);
+            color: #fff;
+            .title, .text{
+                color: #fff!important;
+            }
+        }
+        .policyCard:before{
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: url('../../Images/cardBg.jpg');
+            background-repeat: no-repeat;
+            opacity: 0;
+            content: "";
+            width: 100%;
+            transform:  perspective(400px) scaleX(0);
+            transition: all 0.4s linear;
+            z-index: 0; 
+            border-bottom: 2px solid var(--primaryColor);
+        }
+        .policyCard:hover:before{
+            opacity: 1;
+            transform: perspective(400px) scale(1.0);
+        }
+        .policyCard .content{
+            position: relative;
+            z-index: 1; 
+        }
+        .policyCard:hover .title,
+        .policyCard:hover .text{
+             color: #fff!important;
+        }
+    }
+
+    // another section here for governance and compliance
+    .hseContentDownload{
+        background: url('https://res.cloudinary.com/hayteetech/image/upload/v1755827095/pedarEnergy/about-image3_phfgoa.jpg')no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 60px 0px;
+        position: relative;
+        width: 100%;
+        top: 60px;
+        .downloadContent{
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .left{
+                flex: 1;
+                border-right: 5px solid #fff;
+                .title{
+                    font-size: 44px;
+                    line-height: 1.2em;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    color: var(--primaryColor);
+                    font-family: var(--headingFamily);
+                }
+                .text{
+                    font-family: var(--textFamily);
+                    font-size: 16px;
+                    padding: 20px 0px 10px;
+                    width: 90%;
+                }
+            }
+            .right{
+                flex:1;
+                padding-left: 30px;
+                .download{
+                    font-family: var(--textFamily);
+                    font-size: 16px;
+                    padding-bottom: 20px;
+                    
+                }
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .downloadContent{
+                flex-direction: column;
+                padding: 0 15px;
+                align-items: flex-start;
+                gap: 25px;
+                .left{
+                    border-right: none;
+                    border-bottom: 5px solid #fff;
+                    padding-bottom: 20px;
+                }
+            }
+        }
     }
 }

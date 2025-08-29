@@ -3,7 +3,6 @@
     top: 0;
     left: 0;
     width: 100%;
-
     z-index: 10;
     .whenScroll{
         transform: translateY(-10%); /* hidden above */
@@ -12,17 +11,20 @@
         padding 0.3s ease,
         box-shadow 0.3s ease,
         transform 0.4s ease; /* slide in */
-       
         background: #fff;
         position: -webkit-sticky!important;
         position: fixed!important;
         top: 0;
         padding: 10px;
         width: 100%;
-        z-index: 10!important;
+        z-index: 999!important;
         box-shadow: 0px 15px 25px -15px #000000;
         .navbarSession{
             transform: translateY(10px); /* slide down */
+        }
+        .dropdown{
+            right: 0;
+            left: auto;
         }
     }
     .whenNotScroll{
@@ -65,8 +67,9 @@
                     a{
                         text-decoration: none;
                         color: inherit;
+                        transition: 0.4s all ease;
                         &:hover{
-                            color: var(--secondaryColor);
+                            color: var(--primaryColor);
                             text-decoration: underline;
                         }
                     }
@@ -109,7 +112,7 @@
                 height: auto;
             }
         }
-        ul{
+        ul.nav-menu{
             display: flex;
             list-style: none;
             gap: 30px;
@@ -123,6 +126,7 @@
                     font-weight: 600;
                     transition: color 0.3s ease;
                     text-transform: uppercase;
+                    padding-bottom: 50px;
                     font-family: var(--headingFamily);
                     &:hover{
                         color: var(--secondaryColor);
@@ -131,6 +135,53 @@
                 a.active{
                     color: var(--primaryColor)
                 }
+                .dropdown{
+                    position: absolute;
+                    top: 120%; /* start lower so it slides up */
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(15px);
+                    background: #fff;
+                    width: 250px;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    transition: all 0.3s ease;
+                    z-index: 10;
+                    ul{
+                        padding:0;
+                        margin: 0;
+                    }
+                    li{
+                        list-style: none;
+                    }
+
+                    .dropdown-content li a {
+                        top:0px;
+                        display: block;
+                        padding: 10px 16px 5px;
+                        font-size: 15px;
+                        font-weight: 600;
+                        text-decoration: none;
+                        color: #222;
+                        height: 50px;
+                        font-family: var(--headingFamily);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                        transition: background 0.3s ease;
+                        &:hover{
+                            background: var(--secondaryColor);
+                            color: #fff;
+                            border-left: 4px solid var(--primaryColor);
+                        }
+                    }
+                    a.active{
+                            color: var(--primaryColor)!important;
+                        }
+                }
+            }
+            .nav-item:hover .dropdown{
+                opacity: 1;
+                visibility: visible;
+                top: 100%;          /* slide up into position */
+                transform: translateY(0); 
             }
         }
         .hamburger{
@@ -155,6 +206,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                gap: 7px;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
                 &:before{
@@ -204,13 +256,22 @@
     }
     @media screen and (max-width: 768px) {
         .navbarSession{
-            padding: 30px 20px;
+            padding: 30px 30px;
             .imageContainer{
-            width: fit-content;
-            img{
-                width: 80%;
+                width: 50%;
+                img{
+                    width: 60%;
+                    height: auto;
+                }
             }
         }
+        
+    }
+     @media screen and (max-width: 500px) {
+        .navbarSession{
+            .imageContainer{
+                width: 60%;
+            }
         }
         
     }
@@ -225,7 +286,7 @@
     @media screen and (max-width: 1115px) {
         .navbarSession{
             .nav-menu{
-                display: none;
+                display: none!important;
             }
             .hamburger{
                 display: block;

@@ -129,3 +129,18 @@ h2{
         width: 100%;
     }
 }
+
+/* styling for swiper dot */
+.swiper-pagination-bullet {
+  background: var(--primaryColor)!important;
+  opacity: 0.8;
+  width: 15px!important;
+  height: 15px!important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  margin: 0 10px!important
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.2);
+}

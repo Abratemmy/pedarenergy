@@ -14,6 +14,7 @@ function About() {
         pageName="About"
       />
 
+
       <div className="aboutContainer">
         <div className="container">
           <div className="aboutContainerSession1">
@@ -21,17 +22,19 @@ function About() {
               <div className="col-xl-6">
                 <div className="content">
                   <div className="titleStroke">About</div>
-                  <div className="subtitle"><span className="border-box"></span>Welcome to Pedar</div>
-                  <h2 className="pageTitle">The best Solution of <br /><span>all energy </span></h2>
+                  <div className="subtitle"><span className="border-box"></span>Welcome to Pedar Energy</div>
+                  <h2 className="pageTitle">Powering Progres, <span> Protecting people </span></h2>
 
                   <div className="text">
-                    Pedar Energy is a Nigerian energy services and solutions company delivering integrated, future-focused, and resilient energy strategies.
+                    At Pedar Energy Limited, we are more than an energy services company, we are a solutions partner committed to powering industries, protecting lives, and driving sustainable growth across Africa.
+                  </div>
 
-                    <ul style={{ padding: '10px' }}>
-                      <li>We serve clients across oil & gas, industrial, commercial, and renewable energy sectors.</li>
-                      <li>Our operations are built on safety, innovation, governance, and sustainability.</li>
-                      <li>Through proprietary brands like PEGEAR® and global partnerships, we address Africa’s unique challenges while ensuring compliance with international standards.</li>
-                    </ul>
+                  <div className='text'>
+                    Founded on innovation, integrity, and impact, Pedar Energy delivers clean energy solutions, oil & gas services, and high-quality personal protective equipment (PPE) designed to meet today’s toughest industrial challenges. Whether it’s enabling smarter energy systems, ensuring workplace safety, or optimizing oilfield performance, we are relentless in our pursuit of excellence.
+                  </div>
+
+                  <div className="text">
+                    Our approach is simple: safety first, sustainability always, and value at every step. We believe Africa’s energy future must balance efficiency, responsibility, and resilience—and we work with clients, regulators, and communities to make that future possible.
                   </div>
 
                   <div className="aboutButton">
@@ -54,14 +57,21 @@ function About() {
               </div>
             </div>
           </div>
+        </div>
 
-          {/* another section here */}
+        {/* another session here */}
+        {/* vision mission */}
+        <VisionMission />
 
+
+        {/* another section here */}
+
+        <div className="container">
           <div className="howWeworkContainer">
             <div className="howweWorkTop">
               <div className="titleStroke">Steps</div>
-              <div className="subtitle"><span className="border-box"></span>Welcome to Pedar</div>
-              <h2 className="pageTitle">The best Solution of <br /><span>all energy </span></h2>
+              <div className="subtitle"><span className="border-box"></span>Welcome to Pedar Energy</div>
+              <h2 className="pageTitle">Engineering Safety,<br /> <span> Empowering Growth</span></h2>
 
               <div className="text">
                 Pedar Energy plans every project with precision, grounded in data and industry insight.
@@ -153,9 +163,10 @@ function About() {
               </div>
             </div>
           </div>
-
-
         </div>
+
+
+
         {/* another session here */}
         <div className="aboutQuestionContainer">
           <div className="container">
@@ -170,10 +181,6 @@ function About() {
             </div>
           </div>
         </div>
-
-        {/* another session here */}
-        {/* vision mission */}
-        <VisionMission />
 
         {/* another scetion here .coreValue */}
         <div className="coreValueContainer">
@@ -198,7 +205,7 @@ function About() {
                 </div>
               </div>
               <div className="col-md-4">
-                <div className="valueContainerCard">
+                <div className="valueContainerCard valueContainerCard2">
                   <div className="content">
                     <div className="iconCard">
                       <IoCheckmarkDone className="icon" />
@@ -222,7 +229,7 @@ function About() {
                 </div>
               </div>
               <div className="col-md-4">
-                <div className="valueContainerCard">
+                <div className="valueContainerCard valueContainerCard2">
                   <div className="content">
                     <div className="iconCard">
                       <IoCheckmarkDone className="icon" />
@@ -246,7 +253,7 @@ function About() {
                 </div>
               </div>
               <div className="col-md-4">
-                <div className="valueContainerCard">
+                <div className="valueContainerCard valueContainerCard2">
                   <div className="content">
                     <div className="iconCard">
                       <IoCheckmarkDone className="icon" />

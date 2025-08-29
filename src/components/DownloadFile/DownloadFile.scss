@@ -1,0 +1,134 @@
+.documentDownloadBtn {
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s linear;
+    font-family: var(--headingFamily);
+    z-index: 1; 
+    color: #222222; 
+    background: var(--primaryColor);
+    line-height: 48px;
+    padding: 5px 25px;
+    width: fit-content;
+    overflow: hidden; 
+    text-decoration: none;
+}
+.documentDownloadBtn:before{
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: #122b62;
+    opacity: 0;
+    content: "";
+    transform: scale(0.5) rotateX(45deg);
+    transition: all 0.4s linear;
+    z-index: -1; 
+}
+.documentDownloadBtn:hover:before {
+    opacity: 1;
+    transform: scale(1.0) rotateX(0deg);
+}
+.documentDownloadBtn:hover{
+    color: #fff!important;
+}
+
+.downloadOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(15, 96, 175, 0.6);
+    display: flex; /* ensure modal can be centered */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+
+
+    .modal123{
+        background: #fff;
+        padding: 40px 24px;
+        border-radius: 8px;
+        text-align: center;
+        max-width: 400px;
+        width: 60%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        /* Start off-screen */
+        transform: translateX(100%);
+        opacity: 0;
+        transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+
+        
+        h2 {
+            font-size: 1.2rem;
+            padding-bottom: 16px;
+            color: var(--primaryColor);
+            font-family: var(--headingFamily);
+
+            .file-name {
+                color: var(--secondaryColor);
+                font-weight: bold;
+                padding-top: 20px;
+                display: block;
+            }
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-family: var(--headingFamily);
+
+            .btn {
+                padding: 8px 18px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: 500;
+                transition: background 0.3s ease;
+
+            &.yes {
+                background: var(--greenColor); // green
+                color: white;
+
+                &:hover {
+                background: #15803d;
+                }
+            }
+
+            &.no {
+                background: #dc2626; // red
+                color: white;
+
+                &:hover {
+                background: #b91c1c;
+                }
+            }
+            }
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .modal123{
+            width: 70%;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .modal123{
+            width: 90%;
+        }
+    }
+
+    &.openOverlay {
+    .modal123 {
+      /* Slide into place */
+      transform: translateX(0);
+      opacity: 1;
+    
+    }
+  }
+}
+

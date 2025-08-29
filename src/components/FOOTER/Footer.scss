@@ -18,7 +18,7 @@
         background: #fff;
     }
     img{
-        width: 90%;
+        width: 100%;
     }
     .text{
         font-family: var(--textFamily);
@@ -112,6 +112,16 @@
         font-family: var(--textFamily);
         font-size: 17px;
     }
-}
-.FooterContainer .content{
+
+    @media screen and (max-width: 500px){
+        .image{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        img{
+            width: 80%;
+        }
+    }
 }

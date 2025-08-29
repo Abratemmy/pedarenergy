@@ -7,6 +7,11 @@ import About from '../pages/About/About';
 import Contact from '../pages/Contact/contact';
 import Services from '../pages/Services/Services';
 import HSE from '../pages/HSE/HSE';
+import Pegear from '../pages/HSE/Pegear';
+import GCompliance from '../pages/HSE/GCompliance';
+import ProjectPartner from '../pages/ProjectPartner/ProjectPartner';
+import BlogPage from '../pages/BlogPage/BlogPage';
+import BlogDetails from '../pages/BlogPage/BlogDetails';
 
 const Router = () => {
 
@@ -16,7 +21,13 @@ const Router = () => {
             <Route exact path="/about_us" caseSensitive={false} element={<About />} />
             <Route exact path="/contact_us" caseSensitive={false} element={<Contact />} />
             <Route exact path="/services" caseSensitive={false} element={<Services />} />
-            <Route exact path="/hse" caseSensitive={false} element={<HSE />} />
+            <Route exact path="/sustainability" caseSensitive={false} element={<HSE />} />
+            <Route exact path="/pegear" caseSensitive={false} element={<Pegear />} />
+            <Route exact path="/governance_compliance" caseSensitive={false} element={<GCompliance />} />
+            <Route exact path="/project_partnership" caseSensitive={false} element={<ProjectPartner />} />
+            <Route exact path="/blogs" caseSensitive={false} element={<BlogPage />} />
+            <Route exact path="/blogs/:title" caseSensitive={false} element={<BlogDetails />} />
+            {/* Add more routes as needed */}
         </Routes>
     )
 }

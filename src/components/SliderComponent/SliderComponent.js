@@ -64,7 +64,7 @@ function SliderComponent() {
                                     className={`topic animate__animated ${activeSlide === 0 ? "animate__fadeInDown animate__delay-1s " : ""
                                         }`}
                                 >
-                                    Powering Africa’s Energy Future, Safely & Sustainably
+                                    Driving Energy Excellence, Building a Safer Future
                                 </div>
                                 <div className={`text animate__animated ${activeSlide === 0 ? "animate__fadeInUp animate__delay-2s" : ""
                                     }`}

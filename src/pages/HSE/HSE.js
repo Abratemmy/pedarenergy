@@ -6,102 +6,137 @@ function HSE() {
     return (
         <div>
             <OtherPages
-                pageName="HSE"
+                pageName="Sustainability"
             />
 
             <div className='hseContainer'>
                 <div className="container">
                     <div className="contactContentTop">
                         <div className="titleStroke">HSE</div>
-                        <div className="subtitle"><span className="border-box"></span>Our HSE brand</div>
-                        <h2 className="pageTitle">Health, Safety, and Environment (HSE) brand</h2>
+                        <div className="subtitle"><span className="border-box"></span>Building a Sustainable Future</div>
+                        <h2 className="pageTitle">Our Commitment to <span>Sustainability</span></h2>
                     </div>
 
                     <div className="hseContent">
                         <div className='title'>
-                            Safety without compromise
+                            Our Commitment to People, Planet, and Performance
                         </div>
 
                         <div className="text">
-                            At Pedar Energy Limited, safety is the cornerstone of every operation. Introducing PEGEAR®, our exclusive Health, Safety, and Environment (HSE) brand, designed to protect the workforce that drives Africa’s energy and industrial sectors forward. PEGEAR® is more than just personal protective equipment (PPE)—it’s a promise of quality, durability, and comfort tailored specifically for African working environments.
-                        </div>
-
-                        <div className='title'>
-                            Why PEGEAR®?
+                            At Pedar Energy Limited, sustainability and HSE (Health, Safety, and Environment) are not checkboxes—they are the very foundation of how we operate. We believe that the future of energy lies in responsible operations, innovative environmental stewardship, and a safety-first culture that protects lives while safeguarding the environment for future generations.
                         </div>
 
                         <div className="text">
-                            The challenges faced by workers in Nigeria and across Africa require safety gear that goes beyond generic standards. PEGEAR® meets this demand by delivering equipment engineered for local climate conditions, cultural nuances, and the unique hazards of oil & gas, construction, power generation, and manufacturing industries.
+                            From offshore oilfield services to clean energy innovation, our approach is guided by a single principle: <strong>no job is so urgent that it cannot be done safely and sustainably.</strong>
                         </div>
 
-                        <div className='title'>Key Advantages:</div>
+                        <div className="title">
+                            Our Sustainability Vision
+                        </div>
+
+                        <div className="text">
+                            We are committed to creating shared value for our clients, communities, and the planet. Our sustainability strategy is built around three pillars:
+                        </div>
+
+                        <div className='subTitle'><span>1.</span>Environmental Responsibility</div>
                         <ul className="advantagesList">
-                            <li>Tailored Fit and Comfort: <span>Our PPE is designed ergonomically to fit diverse body types, including female workers, ensuring comfort during long shifts in challenging environments.</span></li>
-                            <li>Durability in Harsh Conditions: <span>Made from premium materials that withstand heat, dust, chemicals, and physical impact, PEGEAR® products offer reliable protection day in and day out.</span></li>
-                            <li>Compliance and Certification: <span>Every PEGEAR® product meets or exceeds Nigerian Industrial Standards (NIS) and international safety regulations such as ISO, OSHA, and ANSI.</span></li>
-                            <li>Custom Branding: <span>We provide options for corporate branding to foster a unified safety culture and enhance workforce pride.</span></li>
-                            <li>Innovative Technology Integration: <span>Some PEGEAR® solutions include smart PPE features—such as environmental sensors, GPS tracking, and impact alerts—to elevate worker safety to the digital age.</span></li>
+                            <li>Carbon Reduction Initiatives: <span> Integrating renewable energy solutions and clean fuel options in our operations.</span></li>
+                            <li>Energy Efficiency: <span>Deploying technology to minimize energy waste across projects.</span></li>
+                            <li>Waste Management: <span>Reducing, reusing, and recycling in every operational phase.</span></li>
+                        </ul>
+
+                        <div className='subTitle'><span>2.</span>Social Impact</div>
+                        <ul className="advantagesList">
+                            <li>Local Content Development: <span>Creating jobs and opportunities for Nigerian talent through training and skills transfer.</span></li>
+                            <li>Community Engagement: <span>Partnering with local communities to support education, health, and infrastructure.</span></li>
+                            <li>Empowerment: <span>Providing opportunities for women and underrepresented groups in technical fields.</span></li>
+                        </ul>
+
+                        <div className='subTitle'><span>3.</span>Governance & Ethics</div>
+                        <ul className="advantagesList">
+                            <li><span>Adhering to the highest standards of corporate governance, transparency, and compliance.</span></li>
+                            <li><span>Conducting all operations with integrity and zero tolerance for unethical practices</span></li>
+
                         </ul>
 
                         <div className="hseImage">
-                            <img src="https://res.cloudinary.com/hayteetech/image/upload/v1755493952/pedarEnergy/Hse_ydbdxt.png" alt="PEGEAR® HSE Brand" className='img-fluid' />
+                            <img src="https://res.cloudinary.com/hayteetech/image/upload/v1755823497/pedarEnergy/sustainability1_si9fuu.jpg" alt="PEGEAR® HSE Brand" className='img-fluid' />
                         </div>
 
                         <div className='title'>
-                            Our PEGEAR® Product Range
+                            Health, Safety, and Environment (HSE)
                         </div>
 
                         <div className="text">
-                            We offer a comprehensive lineup of protective equipment and safety accessories tailored for energy and industrial sectors, including but not limited to:
-                        </div>
-                        <ul className="advantagesList">
-                            <li>Protective Clothing: <span>Flame-resistant coveralls, chemical-resistant suits, high-visibility jackets and vests.</span></li>
-                            <li>Head Protection: <span>Industrial-grade helmets with adjustable fittings and accessory mounts</span></li>
-                            <li>Hand Protection: <span>Chemical-resistant gloves, cut-resistant gloves, and insulated gloves for electrical safety.</span></li>
-                            <li>Footwear: <span>Steel-toe boots with slip-resistant soles and puncture-proof midsoles.</span></li>
-                            <li>Eye and Face Protection: <span>Safety goggles, face shields, and welding masks.</span></li>
-                            <li>Fall Protection: <span>Harnesses, lanyards, and anchor systems designed for working at height.</span></li>
-                            <li>Respiratory Protection: <span>Disposable and reusable masks, respirators, and air-purifying devices.</span></li>
-                        </ul>
+                            Safety is not a department—it’s our culture. Our goal is simple: <strong>zero incidents, zero harm, zero compromise.</strong>
+                            We have established rigorous HSE protocols that exceed industry standards, ensuring that every task is performed in compliance with national and international regulations.
 
-                        <div className='title'>
-                            Beyond PPE — PEGEAR® Safety Solutions
                         </div>
 
-                        <div className="text">
-                            PEGEAR® is not limited to equipment supply. Our holistic approach encompasses:
-                        </div>
+                        <div className='title'>Our HSE Principles:</div>
                         <ul className="advantagesList">
-                            <li>Safety Training Programs: <span>We conduct workshops and hands-on training to ensure correct use and maintenance of PPE.</span></li>
-                            <li>HSE Audits and Compliance Advisory: <span>We help companies build and maintain safety systems aligned with local and international standards.</span></li>
-                            <li>Workplace Safety Culture Development: <span>Through behavior-based safety initiatives and leadership coaching, we foster environments where safety is a shared responsibility.</span></li>
+                            <li>Protect People First: <span>The health and safety of our employees, contractors, and clients come before everything else.</span></li>
+                            <li>Safe Workplaces: <span>Implementing hazard identification, risk assessment, and control measures before any work begins.</span></li>
+                            <li>Incident Prevention: <span>Proactive safety training, regular drills, and constant safety culture reinforcement.</span></li>
+                            <li>Environmental Care: <span>Minimizing spills, emissions, and environmental footprint in every project.</span></li>
 
                         </ul>
 
                         <div className='title'>
-                            PEGEAR® and Pedar Energy: A Partnership for Safer Workplaces
+                            PEGEAR™ – Our HSE Innovation Brand
                         </div>
 
                         <div className="text">
-                            By integrating PEGEAR® into our broader service offerings, Pedar Energy Limited guarantees that safety is embedded in every project phase—from staffing to engineering and operations. Our clients benefit from:
+                            PEGEAR™ is Pedar Energy’s unique safety and environmental innovation arm, delivering premium PPE and HSE products tailored for Africa’s industries.
                         </div>
+                        <div className="text">Through PEGEAR™, we:</div>
                         <ul className="advantagesList">
-                            <li><span>Reduced workplace incidents and lost-time injuries.</span></li>
-                            <li><span>Reduced workplace incidents and lost-time injuries.</span></li>
-                            <li><span>Streamlined compliance with regulatory authorities.</span></li>
-                            <li><span>Tailored safety solutions that match project-specific hazards.</span></li>
+                            <li><span>Design and supply</span> personal protective equipment <span>that meets global standards while accommodating local needs (including female-focused PPE designs).</span></li>
+                            <li><span>Partner with </span>OEMs <span>(Original Equipment Manufacturers) to ensure high-quality, durable, and certified safety gear</span></li>
+                            <li><span>Integrate</span> smart PPE technology<span> - such as sensors, GPS tracking, and environmental monitors for enhanced worker safety.</span></li>
 
                         </ul>
 
                         <div className='title'>
-                            Commitment to Innovation and Continuous Improvement
+                            Gas & Innovative Clean Energy Solutions
                         </div>
 
                         <div className="text">
-                            PEGEAR® invests continuously in research and development, collaborating with industry experts and equipment manufacturers to pioneer new safety solutions. We stay ahead of emerging risks and evolving regulations, ensuring our clients receive the most effective protection possible.
+                            We are actively developing and delivering projects that move Nigeria closer to a cleaner, more sustainable energy future:
+                        </div>
+                        <ul className="advantagesList">
+                            <li>Gas-to-Power Projects <span>– Leveraging natural gas as a bridge fuel for lower emissions.</span></li>
+                            <li>Mini-LNG & CNG Solutions <span>– Flexible gas supply for industrial and commercial clients.</span></li>
+                            <li>Solar & Hybrid Power Systems <span>– Tailored renewable solutions for remote sites and urban installations.</span></li>
+                            <li>Energy Efficiency Audits <span>– Identifying and implementing cost-saving, low-carbon improvements.</span></li>
+                            <li>Green Hydrogen Exploration <span>– Positioning for next-generation clean fuel adoption in Africa. </span></li>
+
+                        </ul>
+
+                        <div className="hseImage">
+                            <img src="https://res.cloudinary.com/hayteetech/image/upload/v1755823496/pedarEnergy/sustainability2_ltdrhg.jpg" alt="PEGEAR® HSE Brand" className='img-fluid' />
+                        </div>
+
+                        <div className='title'>
+                            Our Sustainability Goals (2025–2030)
+                        </div>
+
+                        <ul className="advantagesList">
+                            <li>50% reduction <span> in operational emissions through clean energy integration.</span></li>
+                            <li>Zero fatalities <span> and a measurable reduction in lost-time incidents (LTI).</span></li>
+                            <li>100% compliance <span>with all HSE and environmental regulations.</span></li>
+                            <li><span>Launching at least </span>three innovative clean energy projects <span> in Nigeria and West Africa.</span></li>
+
+                        </ul>
+
+                        <div className='title'>
+                            Why This Matters
                         </div>
                         <div className='text'>
-                            Experience the difference that dedicated, locally-focused safety solutions can make. Contact us today to learn how PEGEAR® can elevate your workforce safety standards and protect your most valuable asset—your people.
+                            We understand that clients today don’t just want a contractor, they want a partner who shares their values for a sustainable, safe, and prosperous future.
+                        </div>
+                        <div className='text'>
+                            At Pedar Energy, every project is a chance to <span>prove that safety and sustainability are competitive advantages </span> that drive performance, build trust, and secure long-term value.
                         </div>
                     </div>
 

@@ -1,94 +1,76 @@
-import React from 'react';
-import './Testimony.scss';
+import React from "react";
 import { FaQuoteLeft } from "react-icons/fa6";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay, A11y } from "swiper/modules";
 
-function TestimonialComponent() {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        initialSlide: 0,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 800,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
+// Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+import "./Testimony.scss";
+
+export default function TestimonialSwiper() {
     return (
-        <div className="testimonialComponent">
-            <div className="testimonialComponentWrapper">
+        <section className="tst-section">
+            <div className="tst-hero">
                 <div className="container">
                     <div className="contactContentTop">
                         {/* <div className="titleStroke">Projects</div> */}
                         <div className="subtitle"><span className="border-box"></span>TESTIMONIALS</div>
-                        <h2 className="pageTitle">What People says about us</h2>
+                        <h2 className="pageTitle">What People say about us</h2>
                     </div>
                 </div>
+
             </div>
 
             <div className="container">
-                <Slider {...settings} className='testimonialSlider'>
-                    <div className="content">
-                        <div className="testimonyIcon">
-                            <FaQuoteLeft className='icon' />
-                        </div>
+                <div className="tst-wrap">
+                    <Swiper
+                        modules={[Pagination, Autoplay, A11y]}
+                        slidesPerView={3}
+                        spaceBetween={20}
+                        loop={true}
+                        autoplay={{ delay: 5000, disableOnInteraction: false }}
+                        pagination={{ clickable: true }}
+                        breakpoints={{
+                            0: { slidesPerView: 1 },      // phones
+                            750: { slidesPerView: 2 },    // tablets
+                            1200: { slidesPerView: 3 },   // desktops
+                        }}
+                        className="tst-swiper"
+                    >
+                        <SwiperSlide>
+                            <div className="tst-card">
+                                <div className="tst-quote"><FaQuoteLeft className="icon" /></div>
+                                <div className="tst-text">
+                                    Pedar Energy’s independent assessment gave us confidence in contract compliance and project integrity.
+                                </div>
+                                <div className="tst-name">Regulatory Auditor</div>
+                            </div>
+                        </SwiperSlide>
 
-                        <div className='testimonyText'>
-                            Pedar Energy’s independent assessment gave us confidence in contract compliance and project integrity.
-                        </div>
-                        <div className="name">
-                            Regulatory Auditor
-                        </div>
-                    </div>
+                        <SwiperSlide>
+                            <div className="tst-card">
+                                <div className="tst-quote"><FaQuoteLeft className="icon" /></div>
+                                <div className="tst-text">
+                                    Pedar Energy’s engineering delivery set a new benchmark for reliability and safety.
+                                </div>
+                                <div className="tst-name">Client, Oil &amp; Gas Operator</div>
+                            </div>
+                        </SwiperSlide>
 
-                    <div className="content">
-                        <div className="testimonyIcon">
-                            <FaQuoteLeft className='icon' />
-                        </div>
-
-                        <div className='testimonyText'>
-                            Pedar Energy’s engineering delivery set a new benchmark for reliability and safety.
-                        </div>
-                        <div className="name">
-                            Client, Oil & Gas Operator
-                        </div>
-                    </div>
-
-                    <div className="content">
-                        <div className="testimonyIcon">
-                            <FaQuoteLeft className='icon' />
-                        </div>
-
-                        <div className='testimonyText'>
-                            PEGEAR® finally brings PPE that fits everyone on site.
-                        </div>
-                        <div className="name">
-                            HSE Officer, Manufacturing
-                        </div>
-                    </div>
-                </Slider>
+                        <SwiperSlide>
+                            <div className="tst-card">
+                                <div className="tst-quote"><FaQuoteLeft className="icon" /></div>
+                                <div className="tst-text">
+                                    PEGEAR® finally brings PPE that fits everyone on site.
+                                </div>
+                                <div className="tst-name">HSE Officer, Manufacturing</div>
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
             </div>
-        </div>
-    )
+        </section>
+    );
 }
-
-export default TestimonialComponent

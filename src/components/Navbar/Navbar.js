@@ -35,7 +35,7 @@ function Navbar() {
         <div className="navbarContainer">
             {navbarScroll ?
                 <div className="whenScroll">
-                    <div className="container">
+                    <div className="container" style={{ background: '#fff' }}>
                         <div className="navbarSession">
                             <div className="imageContainer">
                                 <img src="https://res.cloudinary.com/hayteetech/image/upload/v1755574137/pedarEnergy/pedarLogo_i2pb1e.png" alt="Pedar energy" />
@@ -54,12 +54,34 @@ function Navbar() {
                                     <NavLink to="/services" className="nav-links" >Services</NavLink>
                                 </li>
 
+
                                 <li className='nav-item'>
-                                    <NavLink to="/hse" className="nav-links" >HSE</NavLink>
+                                    <NavLink to="/blogs" className="nav-links">Blogs</NavLink>
                                 </li>
 
                                 <li className='nav-item'>
                                     <NavLink to="/contact_us" className="nav-links" >Contact</NavLink>
+                                </li>
+
+                                <li className='nav-item'>
+                                    <a to="#" className="nav-links" style={{ cursor: 'pointer' }} >Pages + </a>
+
+                                    <div className="dropdown">
+                                        <ul className="dropdown-content">
+                                            <li>
+                                                <NavLink to="/pegear" className="nav-links">PEGEAR®</NavLink>
+                                            </li>
+                                            <li>
+                                                <NavLink to="/sustainability" className="nav-links">Sustainability</NavLink>
+                                            </li>
+                                            <li>
+                                                <NavLink to="/project_partnership" className="nav-links">Projects & Partnerships</NavLink>
+                                            </li>
+                                            <li>
+                                                <NavLink to="/governance_compliance" className="nav-links">Governance & Compliance</NavLink>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </li>
                             </ul>
 
@@ -114,11 +136,28 @@ function Navbar() {
                                     </li>
 
                                     <li className='nav-item'>
-                                        <NavLink to="/hse" className="nav-links" >HSE</NavLink>
+                                        <NavLink to="/blogs" className="nav-links">Blogs</NavLink>
                                     </li>
 
                                     <li className='nav-item'>
-                                        <NavLink to="/contact_us" className="nav-links">Contact</NavLink>
+                                        <a to="#" className="nav-links" style={{ cursor: 'pointer' }} >Pages + </a>
+
+                                        <div className="dropdown">
+                                            <ul className="dropdown-content">
+                                                <li>
+                                                    <NavLink to="/pegear" className="nav-links">PEGEAR®</NavLink>
+                                                </li>
+                                                <li>
+                                                    <NavLink to="/sustainability" className="nav-links">Sustainability</NavLink>
+                                                </li>
+                                                <li>
+                                                    <NavLink to="/project_partnership" className="nav-links">Projects & Partnerships</NavLink>
+                                                </li>
+                                                <li>
+                                                    <NavLink to="/governance_compliance" className="nav-links">Governance & Compliance</NavLink>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                 </ul>
 
@@ -129,7 +168,7 @@ function Navbar() {
                                 <div className="getQuote">
                                     <div className="quoteContent">
                                         <IoLogInOutline className="loginIcon" />
-                                        <NavLink to="/contact_us" className="buttonText">Get a Quote </NavLink>
+                                        <NavLink to="/contact_us" className="buttonText">Contact Us </NavLink>
                                     </div>
                                 </div>
                             </div>
@@ -160,8 +199,17 @@ function Navbar() {
                     <li className="nav-item">
                         <NavLink to="/services" className="nav-links" onClick={handleClick}>Services</NavLink>
                     </li>
-                    <li className='nav-item'>
-                        <NavLink to="/hse" className="nav-links" onClick={handleClick} >HSE</NavLink>
+                    <li className="nav-item">
+                        <NavLink to="/pegear" className="nav-links" onClick={handleClick}>PEGEAR®</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="/sustainability" className="nav-links" onClick={handleClick}>Sustainability</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="/project_partnership" className="nav-links" onClick={handleClick}>Projects & Partnerships</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="/governance_compliance" className="nav-links" onClick={handleClick}>Governance & Compliance</NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink to="/contact_us" className="nav-links" onClick={handleClick}>Contact</NavLink>

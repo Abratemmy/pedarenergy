@@ -5,21 +5,47 @@ import { MdKeyboardArrowRight, MdKeyboardArrowDown } from "react-icons/md";
 function Faq() {
     const faqData = [
         {
-            service: 'Where can I find more information?',
-            answer: 'You can find more information about our services on our website, or you can contact us directly for specific inquiries. We also have a FAQ section that addresses common questions.',
+            service: 'What does Pedar Energy Limited do?',
+            answer: 'Pedar Energy is a Nigerian energy services company providing innovative clean energy solutions, engineering & technical services, OEM equipment partnerships, and local PPE production. We are committed to safety, sustainability, and local content growth.',
         },
         {
-            service: 'Which industries does Pedar Energy serve?',
-            answer: 'Pedar Energy serves a wide range of industries. Our expertise allows us to tailor our services to meet the unique needs of each industry.',
+            service: 'Where is Pedar Energy based?',
+            answer: 'We are headquartered in Lagos, Nigeria, with operations and partnerships across the country to serve the oil & gas, power, and industrial sectors.',
         },
         {
-            service: 'Where are your operations located?',
-            answer: 'We serve a wide range of industries, including residential, commercial, industrial, and specialized sectors. Our expertise allows us to tailor our services to meet the unique needs of each industry.',
+            service: 'What clean energy solutions do you offer?',
+            answer: 'Our solutions include gas-to-power plants, LNG & CNG supply, solar hybrids, renewable systems, energy storage, and smart grid integration tailored for industrial and commercial clients.',
 
         },
         {
-            service: 'Do you work with both government and private sector clients?',
-            answer: "Yes, we work with a wide range of clients, including government agencies, private companies, and individuals. Our services are tailored to meet the specific needs of each client, regardless of their sector.",
+            service: 'Do you provide energy solutions for SMEs or only large-scale clients?',
+            answer: "While our focus is on industrial and commercial operations, we design scalable solutions that can be tailored for SMEs, estates, and community power projects.",
+        },
+        {
+            service: "What makes Pedar Energy’s PPE different from imported products?",
+            answer: "Our PPE is locally manufactured to international standards, ensuring better quality control, faster delivery, affordability, and designs tailored to Nigeria’s operating conditions.",
+        }
+        ,
+        {
+            service: 'Who can buy Pedar Energy PPE?',
+            answer: 'We supply to oil & gas companies, construction firms, manufacturing plants, and government agencies. Retail availability for individuals and SMEs will be announced soon.',
+
+        },
+        {
+            service: 'What engineering services does Pedar Energy provide?',
+            answer: "We offer Front-End Engineering Design (FEED), EPC services, facility upgrades, asset integrity management, and multi-disciplinary engineering support (mechanical, civil, electrical, instrumentation).",
+        },
+        {
+            service: "Can Pedar Energy support long-term maintenance contracts?",
+            answer: "Yes, we provide end-to-end lifecycle support, including maintenance, modifications, and integrity checks for long-term operational efficiency.",
+        },
+        {
+            service: 'How does Pedar Energy support Nigeria’s local content policy?',
+            answer: "We invest in local manufacturing (PPE), skills transfer, Nigerian workforce development, and SME empowerment, reducing dependency on imports and creating local jobs.",
+        },
+        {
+            service: "Do you partner with OEMs or international companies?",
+            answer: "Yes, we collaborate with trusted Original Equipment Manufacturers (OEMs) to deliver certified machinery, power equipment, and after-sales support.",
         }
     ]
 

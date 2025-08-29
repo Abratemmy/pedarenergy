@@ -1,0 +1,49 @@
+.projectContainer{
+    position: relative;
+    width: 100%;
+    padding: 70px 0px;
+
+    .projectContent{
+        position: relative;
+        width: 100%;
+        .title{
+            font-family: var(--headingFamily);
+            font-weight: 600;
+            font-size: large;
+            color: var(--primaryColor);
+        }
+        .text{
+            font-family: var(--textFamily);
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+            padding: 10px 0px;
+            span{
+                font-weight: 600;
+            }
+        }
+        ul{
+            list-style-type: none;
+            padding-left: 5px;
+            li{
+                font-family: var(--textFamily);
+                font-size: 15px;
+                color: #555;
+                margin-bottom: 10px;
+                font-weight: 500;
+                &:before{
+                    content: "•";
+                    color: var(--primaryColor);
+                    margin-right: 10px;
+                }
+                span{
+                    font-weight: 600;
+                }
+            }
+        }
+        .projectCardContainer{
+            background: #e4e2e285;
+            padding-bottom: 0px;
+        }
+    }
+}

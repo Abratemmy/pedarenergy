@@ -61,11 +61,12 @@
 
 .howWeworkContainer{
     position: relative;
+    padding-top: 20px;
     .howweWorkTop{
         position: relative;
         text-align: center;
         width: 70%;
-        margin: 60px auto 20px;
+        margin: 20px auto 20px;
         .subtitle{
             justify-content: center;
         }
@@ -294,6 +295,13 @@
             font-weight: 16px;
             padding: 5px 0px;
             color: #222222;
+        }
+    }
+    .valueContainerCard2{
+        background: var(--secondaryColor);
+        color: #fff;
+        .cardTitle, .text{
+            color: #fff!important;
         }
     }
     .valueContainerCard:before{

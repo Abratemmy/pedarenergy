@@ -15,6 +15,8 @@ function App() {
       <Navbar />
       <Router />
       <Footer />
+
+      {/* password: fr enquiries@pedarenergy.com is @@Quality2025@@ */}
     </div>
   );
 }

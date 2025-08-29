@@ -85,6 +85,9 @@
     @media screen and (max-width: 600px) {
         .blogCard {
             flex-direction: column; /* Stack image and text vertically */
+            .text-holder{
+                padding: 5px 10px;
+            }
         }
         .img-holder, .text-holder {
             width: 100%; 
