@@ -144,3 +144,30 @@ h2{
   opacity: 1;
   transform: scale(1.2);
 }
+
+.scrollToTopButton{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--primaryColor);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  width: 45px;
+  height: 45px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background: var(--secondaryColor);
+    transform: scale(1.1);
+  }
+}

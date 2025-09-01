@@ -37,9 +37,9 @@ function Navbar() {
                 <div className="whenScroll">
                     <div className="container" style={{ background: '#fff' }}>
                         <div className="navbarSession">
-                            <div className="imageContainer">
+                            <NavLink to="/" className="imageContainer">
                                 <img src="https://res.cloudinary.com/hayteetech/image/upload/v1755574137/pedarEnergy/pedarLogo_i2pb1e.png" alt="Pedar energy" />
-                            </div>
+                            </NavLink>
 
                             <ul className="nav-menu active">
                                 <li className='nav-item'>
@@ -56,7 +56,7 @@ function Navbar() {
 
 
                                 <li className='nav-item'>
-                                    <NavLink to="/blogs" className="nav-links">Blogs</NavLink>
+                                    <NavLink to="/blogs" className="nav-links">Blog</NavLink>
                                 </li>
 
                                 <li className='nav-item'>
@@ -118,9 +118,9 @@ function Navbar() {
                         </div>
 
                         <div className="navbarSession mainNavbar">
-                            <div className="imageContainer">
+                            <NavLink to="/" className="imageContainer">
                                 <img src="https://res.cloudinary.com/hayteetech/image/upload/v1755574137/pedarEnergy/pedarLogo_i2pb1e.png" alt="Pedar energy" />
-                            </div>
+                            </NavLink>
                             <div className="menuList">
                                 <ul className="nav-menu active">
                                     <li className='nav-item'>
@@ -136,7 +136,7 @@ function Navbar() {
                                     </li>
 
                                     <li className='nav-item'>
-                                        <NavLink to="/blogs" className="nav-links">Blogs</NavLink>
+                                        <NavLink to="/blogs" className="nav-links">Blog</NavLink>
                                     </li>
 
                                     <li className='nav-item'>
@@ -198,6 +198,9 @@ function Navbar() {
                     </li>
                     <li className="nav-item">
                         <NavLink to="/services" className="nav-links" onClick={handleClick}>Services</NavLink>
+                    </li>
+                    <li className='nav-item'>
+                        <NavLink to="/blogs" className="nav-links" onClick={handleClick}>Blog</NavLink>
                     </li>
                     <li className="nav-item">
                         <NavLink to="/pegear" className="nav-links" onClick={handleClick}>PEGEAR®</NavLink>

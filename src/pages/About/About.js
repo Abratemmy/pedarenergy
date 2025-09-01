@@ -23,7 +23,7 @@ function About() {
                 <div className="content">
                   <div className="titleStroke">About</div>
                   <div className="subtitle"><span className="border-box"></span>Welcome to Pedar Energy</div>
-                  <h2 className="pageTitle">Powering Progres, <span> Protecting people </span></h2>
+                  <h2 className="pageTitle">Powering Progress, <span> Protecting people </span></h2>
 
                   <div className="text">
                     At Pedar Energy Limited, we are more than an energy services company, we are a solutions partner committed to powering industries, protecting lives, and driving sustainable growth across Africa.
@@ -176,7 +176,13 @@ function About() {
                 <div className="text">Pedar is among the world’s leading renewable energy solutions provider.</div>
               </div>
               <div className="right">
-                <div className="titleStroke">24/7</div>
+                <div className="titleStroke">Call us
+                  
+                </div>
+                <div className="call">
+                      <MdPhoneCallback className="icon" />
+                      <a href="tel:(+234) 807 836 6949">(+234) 807 836 6949</a>
+                    </div>
               </div>
             </div>
           </div>

@@ -77,6 +77,7 @@
     background: #fff;
     box-shadow: 9px 12px 38px 0px rgba(0, 0, 0, 0.103);
     border-radius: 10px;
+    position: relative;
     .contact-form{
         margin-bottom: 10px;
         label{
@@ -110,6 +111,14 @@
         }
     }
     button{
+        background-color: crimson;
+         color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .pageButton{
         background-color: var(--primaryColor);
         color: #fff;
         padding: 10px 20px;

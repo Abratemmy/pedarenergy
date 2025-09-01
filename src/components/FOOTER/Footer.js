@@ -4,6 +4,7 @@ import { BsDot } from "react-icons/bs";
 import { NavLink } from 'react-router-dom'
 import { MdOutlineAddIcCall, MdMessage } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
+import { HashLink } from "react-router-hash-link";
 
 function Footer() {
     return (
@@ -19,7 +20,7 @@ function Footer() {
                             <div className="footerCall" style={{ padding: '20px 0px 10px' }}>
                                 <MdMessage className="call" />
                                 <div className="footer-title">Support
-                                    <span> <a href="mailTo:info@pedarene.com">info@pedarenergy.com</a></span>
+                                    <span> <a href="mailTo:info@pedarenergy.com">info@pedarenergy.com</a></span>
                                 </div>
                             </div>
                         </div>
@@ -29,22 +30,22 @@ function Footer() {
                             <div className="footer-title">Our Services</div>
                             <div className="footerLinkArea">
                                 <div className="footerLink">
-                                    <BsDot className='icon' /><NavLink to="" className="footer-link">Clean Energy & Gas</NavLink>
+                                    <BsDot className='icon' /><HashLink smooth to="/services#cleanEnergy" className="footer-link">Clean Energy & Gas</HashLink>
                                 </div>
                                 <div className="footerLink">
-                                    <BsDot className='icon' /><NavLink to="" className="footer-link">Env. & Sustainability</NavLink>
+                                    <BsDot className='icon' /><HashLink smooth to="/services#environmentalAdvisory" className="footer-link">Env. & Sustainability</HashLink>
                                 </div>
                                 <div className="footerLink">
-                                    <BsDot className='icon' /><NavLink to="" className="footer-link">Eng. & Tech. Services</NavLink>
+                                    <BsDot className='icon' /><HashLink smooth to="/services#engineering" className="footer-link">Eng. & Tech. Services</HashLink>
                                 </div>
                                 <div className="footerLink">
-                                    <BsDot className='icon' /><NavLink to="" className="footer-link">OEM & Equipment</NavLink>
+                                    <BsDot className='icon' /><HashLink smooth to="/services#oemPartnerships" className="footer-link">OEM & Equipment</HashLink>
                                 </div>
                                 <div className="footerLink">
-                                    <BsDot className='icon' /><NavLink to="" className="footer-link">Oilfield & Industrial</NavLink>
+                                    <BsDot className='icon' /><HashLink smooth to="/services#procurement" className="footer-link">Oilfield & Industrial</HashLink>
                                 </div>
                                 <div className="footerLink">
-                                    <BsDot className='icon' /><NavLink to="" className="footer-link">Camp Ops & Maintenance </NavLink>
+                                    <BsDot className='icon' /><HashLink smooth to="/services#campSupport" className="footer-link">Camp Ops & Maintenance </HashLink>
                                 </div>
                             </div>
                         </div>
@@ -55,19 +56,19 @@ function Footer() {
                             <div className="footer-title">Quick links</div>
                             <div className="footerLinkArea">
                                 <div className="footerLink">
-                                    <BsDot className='icon' /><NavLink to="/about-us" className="footer-link">About Us</NavLink>
+                                    <BsDot className='icon' /><NavLink to="/about_us" className="footer-link">About Us</NavLink>
                                 </div>
                                 <div className="footerLink">
-                                    <BsDot className='icon' /><NavLink to="/privacy-policy" className="footer-link">Privacy Policy</NavLink>
+                                    <BsDot className='icon' /><NavLink to="/pegear" className="footer-link">PEGEAR®</NavLink>
                                 </div>
                                 <div className="footerLink">
-                                    <BsDot className='icon' /><NavLink to="/contact" className="footer-link">Contact</NavLink>
+                                    <BsDot className='icon' /><NavLink to="/contact_us" className="footer-link">Contact</NavLink>
                                 </div>
                                 <div className="footerLink">
-                                    <BsDot className='icon' /><NavLink to="/terms_condition" className="footer-link">Terms &amp; Conditions</NavLink>
+                                    <BsDot className='icon' /><NavLink to="/sustainability" className="footer-link">Sustainability</NavLink>
                                 </div>
                                 <div className="footerLink">
-                                    <BsDot className='icon' /><NavLink to="/governance" className="footer-link">Governance &amp; Compliance</NavLink>
+                                    <BsDot className='icon' /><NavLink to="/governance_compliance" className="footer-link">Governance &amp; Compliance</NavLink>
                                 </div>
                             </div>
                         </div>

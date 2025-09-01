@@ -12,6 +12,7 @@ import GCompliance from '../pages/HSE/GCompliance';
 import ProjectPartner from '../pages/ProjectPartner/ProjectPartner';
 import BlogPage from '../pages/BlogPage/BlogPage';
 import BlogDetails from '../pages/BlogPage/BlogDetails';
+import ErrorPage from '../pages/ErrorPage/ErrorPage';
 
 const Router = () => {
 
@@ -28,6 +29,9 @@ const Router = () => {
             <Route exact path="/blogs" caseSensitive={false} element={<BlogPage />} />
             <Route exact path="/blogs/:title" caseSensitive={false} element={<BlogDetails />} />
             {/* Add more routes as needed */}
+
+            {/* 👇 Catch-all route for undefined paths */}
+            <Route path="*" element={<ErrorPage />} />
         </Routes>
     )
 }

@@ -4,13 +4,10 @@ import SliderComponent from '../../components/SliderComponent/SliderComponent';
 import { PiWindmillDuotone } from "react-icons/pi";
 import { MdPhoneCallback } from "react-icons/md";
 import { FaPlus } from "react-icons/fa6";
-import { FaSolarPanel, FaBalanceScale, FaThumbsUp, FaHandPointDown } from "react-icons/fa";
-import { GiWaterFountain, GiGlobe, GiArrowWings } from "react-icons/gi";
-import homeWorkforceImage from '../../Images/about-image2.jpg';
+import { FaSolarPanel,  FaThumbsUp, FaHandPointDown } from "react-icons/fa";
+import { GiWaterFountain,} from "react-icons/gi";
 import Button from '../../components/Button/Button';
-import { TbTopologyStar3 } from "react-icons/tb";
 import Faq from '../../components/Faq/Faq';
-import faqImage from '../../Images/faq-style2-image.jpg';
 import ServiceCard from '../../components/ServiceCard/ServiceCard';
 import CounterComponent from '../../components/Counter/CounterComponent';
 import ProjectCard from '../../components/projectCard/ProjectCard';
@@ -115,7 +112,7 @@ function Home() {
                             <div className="home-about-style">
                                 <div className="titleStroke">About</div>
                                 <div className="subtitle"><span className="border-box"></span>WHO WE ARE</div>
-                                <h2>Your Partner get <span> Smarter, Safer Energy</span></h2>
+                                <h2>Your Partner for <span> Smarter, Safer Energy</span></h2>
                                 <div className="content">
                                     Pedar Energy is a Nigerian energy and industrial services company delivering safe, sustainable, and innovative solutions. Our expertise spans engineering, procurement, clean energy, workforce support, and compliance, empowering industries and communities alike.
                                 </div>
@@ -260,10 +257,7 @@ function Home() {
                             <div className="iconImage"><FaThumbsUp className='icon' /></div>
                             <p>Transparent Contracting & Vendor Oversight</p>
                         </div>
-                        <div className="text">
-                            <div className="iconImage"><FaThumbsUp className='icon' /></div>
-                            <p>Independent Person Assessment (IPA) ensures compliance, objectivity, and trust in projects</p>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

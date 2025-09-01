@@ -1,0 +1,14 @@
+.Error404Container{
+    position: relative;
+    width: 100%;
+    padding: 60px 0px;
+
+    .errorBtn{
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+}

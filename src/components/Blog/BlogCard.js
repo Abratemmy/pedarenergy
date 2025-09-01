@@ -11,7 +11,7 @@ function BlogCard() {
                 <div className="contactContentTop">
                     <div className="titleStroke">Blog</div>
                     <div className="subtitle"><span className="border-box"></span>Latest News</div>
-                    <h2 className="pageTitle">News & Article</h2>
+                    <h2 className="pageTitle">News & Articles</h2>
                 </div>
 
                 <div className="blogCardWrapper">

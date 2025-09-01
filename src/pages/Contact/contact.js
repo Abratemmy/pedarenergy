@@ -3,7 +3,8 @@ import OtherPages from '../../components/OtherPages/OtherPages'
 import './Contact.scss';
 import { FaLocationPinLock } from "react-icons/fa6";
 import { MdWifiCalling1, MdAttachEmail } from "react-icons/md";
-import GoogleMapComponent from '../../components/GoogleMap/GoogleMapComponent';
+import { ToastContainer, toast } from 'react-toastify';
+
 
 function Contact() {
     // const navigate = useNavigate()
@@ -17,8 +18,8 @@ function Contact() {
     const [values, setValues] = useState(initialValue);
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
-    const [submitError, setSubmitError] = useState(false)
-    const [successMessage, setSuccessMessage] = useState(false);
+    // const [submitError, setSubmitError] = useState(false)
+    // const [successMessage, setSuccessMessage] = useState(false);
 
     const clearValues = () => {
         console.log("Initial", initialValue)
@@ -50,43 +51,46 @@ function Contact() {
         return Object.keys(errorsValue).length;
 
     };
-
-    // submit form
+   
     const submitForm = async (ev) => {
         ev.preventDefault();
+
         let v = handleError(values);
-        setSuccessMessage(false)
-        setSubmitError(false)
-        // check if there is any eror available and handle here 
+        // setSuccessMessage(false);
+        // setSubmitError(false);
+
         if (v > 0) {
-            console.log("error");
-            setLoading(false)
-        }
-        else {
-            alert("Form submitted successfully");
-            //   sendEmail(ev);
-            // navigate('/form_success');
+            toast.error('All fields are required')
+            setLoading(false);
+        } else {
+            setLoading(true);
+
+            try {
+            // Send form data to FormSubmit.co
+            const formData = new FormData(ev.target);
+
+            const response = await fetch("https://formsubmit.co/ajax/info@pedarenergy.com", {
+                method: "POST",
+                body: formData
+            });
+
+            if (response.ok) {
+                toast.success("Form submitted successfully");
+                // setSubmitError(false);
+                clearValues()
+            } else {
+                toast.error('!Ohpps, Form not submitted123')
+            }
+            } catch (err) {
+            toast.error('!Ohpps, Form not submitted')
+            } finally {
+            setLoading(false);
+            }
         }
     };
-    //   function sendEmail(ev) {
-    //     setLoading(true)
-    //     emailjs.sendForm(
-    //       'service_w9bmuq7',
-    //       'template_pngutyh',
-    //       ev.target,
-    //       'aDa4G9MvkUKU8oiBk'
-    //     ).then(res => {
-    //       setLoading(false)
-    //       setSuccessMessage(true)
-    //       setSubmitError(false)
-    //       clearValues();
-    //     }).catch(err => {
-    //       setLoading(false);
-    //       setSubmitError(true)
-    //       setSuccessMessage(false)
-    //       console.log(err)
-    //     })
-    //   }
+
+    
+    
 
     return (
         <div>
@@ -148,18 +152,18 @@ function Contact() {
                         {/* <div className='col-lg-6'>
                             <GoogleMapComponent />
                         </div> */}
+                        <div className="col-lg-2 col-md-12 col-sm-12"></div>
                         <div className='col-lg-8 col-md-12 col-sm-12'>
                             <div className='contact-formdetails'>
-                                <form onSubmit={submitForm} >
+                                <form 
+                                     
+                                    onSubmit={submitForm} 
+                                >
                                     <div className='row'>
-                                        {successMessage && <div className='successMessage'>
-                                            <div className='text'>Form submitted successfully</div>
-                                        </div>
-                                        }
-                                        {submitError && <div className='submitError'>
-                                            <div className='text'>Form not submitted </div>
-                                        </div>
-                                        }
+                                        <input type="hidden" name="_captcha" value="false" />
+                                        <input type="hidden" name="_subject" value="New Contact Form Submission!" />
+
+
                                         <div className="col-lg-6 col-md-12 col-sm-12">
                                             <div className="contact-form">
                                                 <label>Full Name <span>*</span></label>
@@ -203,18 +207,20 @@ function Contact() {
                                                 <button type="submit" value="Submit" className="pageButton" >Submit</button>
                                             }
                                         </div>
-                                        {successMessage && <div className='successMessage'>
+                                        {/* {successMessage && <div className='successMessage'>
                                             <div className='text'>Form submitted successfully</div>
                                         </div>
                                         }
                                         {submitError && <div className='submitError'>
                                             <div className='text'>Form not submitted </div>
                                         </div>
-                                        }
+                                        } */}
                                     </div>
                                 </form>
+                                <ToastContainer/>
                             </div>
                         </div>
+                        <div className="col-lg-2 col-md-12 col-sm-12"></div>
                     </div>
                 </div>
             </div>

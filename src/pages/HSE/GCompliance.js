@@ -2,7 +2,6 @@ import React from 'react'
 import OtherPages from '../../components/OtherPages/OtherPages';
 import { TbReplaceOff } from "react-icons/tb";
 import { MdOutlineHealing, MdAttractions } from "react-icons/md";
-import Button from '../../components/Button/Button';
 import DownloadFile from '../../components/DownloadFile/DownloadFile';
 
 function GCompliance() {
